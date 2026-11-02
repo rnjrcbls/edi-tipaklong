@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>missyu</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url('bg.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Playfair Display', serif;
+        }
+
+        .content {
+            padding: 30px;
+            text-align: center;
+        }
+
+        img {
+            width: 50%;
+            height: auto;
+            background: transparent;
+            mix-blend-mode: screen;
+        }
+
+        p {
+            color: aqua;
+            text-align: center;
+            font-weight: 900;
+            font-size: 2rem;
+            margin: 5px 0;
+        }
+
+        #continueBtn {
+            margin-top: 25px;
+            padding: 12px 35px;
+
+            border: 2px solid aqua;
+            border-radius: 30px;
+
+            background: transparent;
+            color: aqua;
+
+            font-size: 18px;
+            font-weight: bold;
+
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #continueBtn:hover {
+            background: aqua;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            img {
+                width: 85%;
+            }
+
+            p {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <img src="2.gif" alt="This is a photo">
+       
+        <br><br>
+
+        <p>I</p>
+        <p>M I S S</p>
+        <p>Y O U</p>
+        <p>S O</p>
+        <p>M U C H</p>
+        <p>B A B Y</p>
+
+        <button id="continueBtn" onclick="startExperience()">
+            Continue
+        </button>
+
+    </div>
+
+    <!-- Background Music -->
+             <audio id="backgroundMusic" loop>
+            <source src="miss.mp3" type="audio/mpeg">
+          </audio>
+          
+          <script>
+            // Show alerts first
+            alert("What if?");
+            alert("Paano kung nandito ka ngayon?");
+            alert("What if?");
+            alert("Paano kung magkasama tayo sa oras na ito?");
+            alert("What if?");
+            alert("Paano kung magkatabi tayong nanonood ng paborito nating palabas?");
+            alert("What if?");
+            alert("Paano kung bigla kitang mayakap?");
+            alert("What if?");
+            alert("Paano kung hawak ko ang kamay mo habang naglalakad tayo?");
+            alert("What if?");
+            alert("Paano kung sa simpleng araw na ito, ikaw ang maging dahilan ng ngiti ko?");
+            alert("What if?");
+            alert("Paano kung sabihin kong ikaw ang hinahanap-hanap ko?");
+            alert("What if?");
+            alert("Paano kung aminin kong miss na miss na kita?");
+            alert("What if?");
+            alert("Paano kung wala akong ibang hiling kundi ang makasama ka ngayon?");
+            alert("Pero alam mo...");
+            alert("Kahit hindi ka nandito, ikaw pa rin ang gusto kong makasama. <3");
+            alert("Daming-daming, what if what if nayan.");
+            alert("Pero.....");
+            alert("What if nga?");
+            alert("What if......");
+            alert("U M I I Y A K   N A K O  D A H I L   M I S S   N A   K I T A <3");
+            
+            // Start music after the last alert
+            const music = document.getElementById("backgroundMusic");
+            
+            music.play().catch(() => {
+              // Browser may require another user interaction
+              document.addEventListener("click", function playMusic() {
+                music.play();
+                document.removeEventListener("click", playMusic);
+              }, { once: true });
+            });
+          </script>
+
+</body>
+</html>
